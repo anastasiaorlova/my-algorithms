@@ -18,3 +18,15 @@ function productOfArray(arr) {
     }
     return arr[0] * productOfArray(arr.slice(1));
 }
+
+function linearSearch(arr, val) {
+
+    for(i=0; i< arr.length; i++) {
+        if(arr[i] === val) {
+            return arr[i]
+        } else {
+            return -1
+        }
+    }
+
+}
