@@ -31,9 +31,9 @@ function linearSearch(arr, val) {
 }
 
 function binarySearch(arr, elem) {
-    var start = 0;
-    var end = arr.length - 1;
-    var middle = Math.floor((start + end) / 2);
+    let start = 0;
+    let end = arr.length - 1;
+    let middle = Math.floor((start + end) / 2);
     while(arr[middle] !== elem && start <= end) {
         if(elem < arr[middle]){
             end = middle - 1;
@@ -47,3 +47,18 @@ function binarySearch(arr, elem) {
     }
     return -1;
 }
+
+function bubbleSort(arr) {
+    for(i = arr.length; i > 0; i--) {
+        for(j = 0; j < i-1; j++) {
+            if(arr[j] > arr[j+1]) {
+                let swap = arr[j];
+                arr[j] = arr[j+1];
+                let temp = arr[j+1]
+            }
+        }
+    }
+    return arr
+}
+
+
