@@ -21,12 +21,29 @@ function productOfArray(arr) {
 
 function linearSearch(arr, val) {
 
-    for(i=0; i< arr.length; i++) {
+    for(let i = 0; i< arr.length; i++) {
         if(arr[i] === val) {
-            return arr[i]
+            return i
         } else {
             return -1
         }
     }
+}
 
+function binarySearch(arr, elem) {
+    var start = 0;
+    var end = arr.length - 1;
+    var middle = Math.floor((start + end) / 2);
+    while(arr[middle] !== elem && start <= end) {
+        if(elem < arr[middle]){
+            end = middle - 1;
+        } else {
+            start = middle + 1;
+        }
+        middle = Math.floor((start + end) / 2);
+    }
+    if(arr[middle] === elem){
+        return middle;
+    }
+    return -1;
 }
