@@ -106,3 +106,28 @@ return arr;
 }
 
 selectionSort([0,2,34,22,10,19,17]);
+
+
+
+
+
+
+class Counter extends React.Component {
+
+state = {
+counter: 0
+}
+}
+
+increment() {
+this.setState({
+count: this.state.count + 1
+})
+
+decrement() {
+this.setState({
+count: this.state.count - 1
+})
+}
+
+}
