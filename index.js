@@ -131,3 +131,11 @@ count: this.state.count - 1
 }
 
 }
+
+//IMPERATIVE CODE 
+const header = document.createElement("h1")
+header.textContent = "This is an imperative code example!"
+header.className = "Imperative code is listing HOW and WHERE"
+
+const card = document.querySelector('#card')
+card.append(header)
