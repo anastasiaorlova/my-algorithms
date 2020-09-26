@@ -307,3 +307,39 @@ tree.root = new Node(10);
 tree.root.right = new Node(15);
 tree.root.left = new Node(7);
 tree.root.left.right = new Node(9);
+
+//React form review
+
+import React from 'react';
+
+import React from 'react';
+
+class Form extends React.Component {
+state = {
+firstName: "John",
+lastName: "Henry"
+}
+
+handleFirstNameChange = event => {
+this.setState({
+    firstName: event.target.value
+})
+}
+
+handleLastNameChange = event => {
+this.setState({
+    lastName: event.target.value
+})
+}
+
+render() {
+return (
+    <form>
+    <input type="text" name="firstName" onChange={event => this.handleFirstNameChange(event)} value={this.state.firstName} />
+    <input type="text" name="lastName" onChange={event => this.handleLastNameChange(event)} value={this.state.lastName} />
+    </form>
+)
+}
+}
+
+export default Form;
