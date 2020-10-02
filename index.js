@@ -296,5 +296,7 @@ class Node {
     }
 }
 
-
+//Redux
+export function managePresents(state, action){
+}
 
