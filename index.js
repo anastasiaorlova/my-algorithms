@@ -275,3 +275,8 @@ function stringIncludes(word, letter) {
         return !!matches 
     }
 }
+
+function sortString(str) {
+    return str.split('').sort().join('')
+}
+
