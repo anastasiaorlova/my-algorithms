@@ -264,7 +264,14 @@ class Stack {
         return temp.value;
     }
 }
+//Algorithm review//
 
-
-
-
+function stringIncludes(word, letter) {
+    let matches;
+    for(let i = 0; i < word.length; i++) {
+        if(word[0] === letter) {
+            matches = true
+        }
+        return !!matches 
+    }
+}
