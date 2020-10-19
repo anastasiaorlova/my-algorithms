@@ -280,3 +280,79 @@ function sortString(str) {
     return str.split('').sort().join('')
 }
 
+//Binary Search
+
+function binarySearch(string, letter) {
+var startpoint = 0
+var endpoint = string.length - 1;
+var guessPosition = parseInt((endpoint - startpoint)/2)
+while (startpoint != endpoint) {
+    console.log(`start point is ${startpoint}, endpoint is ${endpoint} and guessposition is ${guessPosition}`)
+    if (string[guessPosition] < letter) {
+        console.log('too low')
+        startpoint = guessPosition
+        guessPosition = startpoint + Math.round((endpoint - startpoint)/2)
+    } else if(string[guessPosition] > letter) {
+        console.log('too high')
+        endpoint = guessPosition
+        guessPosition = startpoint + parseInt((endpoint - startpoint)/2)
+    } else {
+        console.log('just right')
+        return true;
+    }
+}
+if(string === letter){
+    return true
+} else{
+    console.log('sorry')
+    return false;
+}
+}
+
+//Recursion
+
+function sumUpTo(n) {
+    if(n > 1) {
+        sumUpTo(n - 1) + n //recursive call
+    } else {
+        return 1 //base case
+    }
+}
+
+function printString(str) {
+    console.log(str[0]) //мы всегда логиним только первую букву! и таким образом мы постепенно логиним все слово!
+
+    if(str.length > 1) {
+        let substr = str.substring(1, str.length); //The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
+        printString(substr); //здесь мы вызываем ту же функцию, и позиция[1] становится [0], и далее по кругу - рекурсия!
+    } else {
+        return true
+    }
+}
+
+//sorted array
+
+function minAndRemove(arr) {
+let min = arr[0];
+let minIndex = 0;
+for (let i = 0; i < arr.length; i++) {
+    let currentElement = arr[i];
+    if (arr[i] < min) {
+    min = arr[i];
+    minIndex = i;
+    }
+}
+array.splice(minIndex, 1);
+return min;
+}
+
+function selectedSort(arr) {
+    let newMin;
+    let sorted = [];
+    while (arr.length != 0) {
+        newMin = minAndRemove(arr);
+        sorted.push(newMin)
+    }
+    return sorted;
+}
+
