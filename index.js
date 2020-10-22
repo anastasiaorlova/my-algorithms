@@ -400,3 +400,14 @@ if (s.length >= min
 
 return valleys; 
 }
+
+//Merge Sort
+function merge(firstHalf, secondHalf){
+let sorted = []
+let currentMin;
+while(firstHalf.length != 0 && secondHalf.length != 0){
+    let currentMin = findMinAndRemove(firstHalf, secondHalf)
+    sorted.push(currentMin)
+}
+return sorted.concat(firstHalf).concat(secondHalf)
+}
