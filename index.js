@@ -45,21 +45,6 @@ function selectedSort(arr) {
     return sorted;
 }
 
-///HakerRank: Sales by Match
-
-function sockMerchant(n, ar) {
-    let frequencyCounter = {};
-    let pairs = 0;
-    for(let i of ar) {
-        frequencyCounter[i] = (frequencyCounter[i] || 0) + 1;
-        if(frequencyCounter[i] % 2 === 0) {
-            pairs += 1
-        }
-    }
-    return pairs;
-}
-
-
 //Merge Sort
 function merge(firstHalf, secondHalf){
     let sorted = []
@@ -69,4 +54,10 @@ function merge(firstHalf, secondHalf){
         sorted.push(currentMin)
     }
     return sorted.concat(firstHalf).concat(secondHalf)
+    }
+
+    //HakerRank Even Subarray
+
+    function evenSubarray(arr, k) {
+        
     }
