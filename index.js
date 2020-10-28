@@ -56,8 +56,3 @@ function merge(firstHalf, secondHalf){
     return sorted.concat(firstHalf).concat(secondHalf)
     }
 
-    //HakerRank Even Subarray
-
-    function evenSubarray(arr, k) {
-        
-    }
