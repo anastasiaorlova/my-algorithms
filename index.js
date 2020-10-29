@@ -46,7 +46,7 @@ function selectedSort(arr) {
 }
 
 //Merge Sort
-mergeSort([7, 8, 1, 6])
+mergeSort([3, 7, 1, 9])
 
 function mergeSort(array){
 let midpoint = array.length/2
@@ -86,3 +86,10 @@ function merge(firstHalf, secondHalf) {
     return sorted.concat(firstHalf).concat(secondHalf)
 }
 
+//Hakerrank arrays
+function rotLeft(a, d) {
+while (d) {
+    a.push(a.shift());
+    d--;
+    }
+}
