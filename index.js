@@ -152,3 +152,25 @@ function isAnagram(stringA, stringB) {
         return false
     }
 }
+
+//Hakerrank 
+
+function slotWheels(history) {
+    // Write your code here
+
+}
+
+// function isJackPot(number) {
+//     const symbols = [4,4,4,4,3,3,3,2,2,1];
+//     const winner = symbols[number % 10]; // get symbol for rightmost digit
+//     for (let i = 0; i < 2; i++) {
+//         number = Math.floor(number/10); // shift digits to get next symbol
+//         if (symbols[number % 10] !== winner) return 0; // bail out when not the same
+//     }
+//     return winner;
+// }
+
+// const tests = [999, 210, 359];
+// for (const test of tests) {
+//     console.log(`${test} gives jackpot ${isJackPot(test)}`);
+// }
