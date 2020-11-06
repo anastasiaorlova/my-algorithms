@@ -153,24 +153,24 @@ function isAnagram(stringA, stringB) {
     }
 }
 
-//Hakerrank 
-
-function slotWheels(history) {
-    // Write your code here
-
+//Linked List
+class ListNode {
+    constructor(data) {
+        this.data = data
+        this.next = null                
+    }
 }
 
-// function isJackPot(number) {
-//     const symbols = [4,4,4,4,3,3,3,2,2,1];
-//     const winner = symbols[number % 10]; // get symbol for rightmost digit
-//     for (let i = 0; i < 2; i++) {
-//         number = Math.floor(number/10); // shift digits to get next symbol
-//         if (symbols[number % 10] !== winner) return 0; // bail out when not the same
-//     }
-//     return winner;
-// }
+class LinkedList {
+    constructor(head = null) {
+        this.head = head
+    }
+}
 
-// const tests = [999, 210, 359];
-// for (const test of tests) {
-//     console.log(`${test} gives jackpot ${isJackPot(test)}`);
-// }
+let node1 = new ListNode(2)
+let node2 = new ListNode(5)
+node1.next = node2
+
+let list = new LinkedList(node1)
+
+console.log(list.head.next.data) //returns 5
