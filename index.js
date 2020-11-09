@@ -154,7 +154,7 @@ function isAnagram(stringA, stringB) {
 }
 
 //Linked List
-class ListNode {
+class Node {
     constructor(data) {
         this.data = data
         this.next = null                
@@ -167,10 +167,17 @@ class LinkedList {
     }
 }
 
-let node1 = new ListNode(2)
-let node2 = new ListNode(5)
+let node1 = new Node(2)
+let node2 = new Node(5)
 node1.next = node2
 
 let list = new LinkedList(node1)
 
 console.log(list.head.next.data) //returns 5
+
+
+//Mark and toys: Hakerrank
+function maximumToys(prices, k) {
+
+
+}
