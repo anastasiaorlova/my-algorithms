@@ -176,3 +176,18 @@ let list = new LinkedList(node1)
 console.log(list.head.next.data) //returns 5
 
 
+//Mark and toys: Hakerrank
+function maximumToys(prices, k) {
+    let bought = 0;
+    let sortedPrices = prices.sort((a, b) => a - b);
+
+    for (let i = 0; i < sortedPrices.length; i++){
+        if (k < sortedPrices[i]) {
+            break;
+        } else {
+            k = k - sortedPrices[i];
+            bought++;
+        }
+    }
+    return bought
+}
