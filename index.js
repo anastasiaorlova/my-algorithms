@@ -176,8 +176,3 @@ let list = new LinkedList(node1)
 console.log(list.head.next.data) //returns 5
 
 
-//Mark and toys: Hakerrank
-function maximumToys(prices, k) {
-
-
-}
