@@ -199,3 +199,19 @@ function solve(meal_cost, tip_percent, tax_percent) {
     total_cost =  meal_cost + meal_cost * tip_percent/100 + meal_cost * tax_percent/100;
     console.log(Math.round(total_cost));
 }
+
+//two-sums
+
+const twoSum = function(nums, target) {
+    let result = [];
+
+    for(let i = 0; i < nums.length; i++) {
+        for(let j = i + 1; j < nums.length; j++) {
+            if(nums[i] + nums[j] === target) {
+                result.push(nums[i])
+                result.push(nums[j])
+            }
+        }
+    }
+    return result;
+};
