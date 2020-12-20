@@ -202,16 +202,37 @@ function solve(meal_cost, tip_percent, tax_percent) {
 
 //two-sums
 
-const twoSum = function(nums, target) {
+function twoSums(nums, target) {
     let result = [];
 
     for(let i = 0; i < nums.length; i++) {
         for(let j = i + 1; j < nums.length; j++) {
             if(nums[i] + nums[j] === target) {
-                result.push(nums[i])
-                result.push(nums[j])
+            result.push(nums[i], nums[j])
             }
         }
     }
     return result;
 };
+
+  twoSum([1,2,3,4,5], 8) //output: '3 + 5 = 8'
+  twoSum([1,2,3,4,5], 10) //"target not found"
+
+function twoSum(nums, target){
+    let numObject = {} 
+
+    for(let eachNum in nums){
+    let otherNum = target - nums[eachNum]
+        if(otherNum in numObject){
+        let resultArr = [];
+        resultArr.push(otherNum, nums[eachNum])
+
+        return resultArr
+}
+
+        numObject[nums[eachNum]] = eachNum
+
+//NB! adding key/value has to go after the if statement to avoid adding the same index twice.
+}
+return "not found"
+}
