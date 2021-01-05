@@ -86,14 +86,6 @@ function merge(firstHalf, secondHalf) {
     return sorted.concat(firstHalf).concat(secondHalf)
 }
 
-//Hakerrank arrays
-function rotLeft(a, d) {
-while (d) {
-    a.push(a.shift());
-    d--;
-    }
-}
-
 
 //Anagram template
 
