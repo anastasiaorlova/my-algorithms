@@ -151,7 +151,6 @@ function twoSum(nums, target){
 
         numObject[nums[eachNum]] = eachNum
 
-//NB! adding key/value has to go after the if statement to avoid adding the same index twice.
 }
 return "not found"
 }
