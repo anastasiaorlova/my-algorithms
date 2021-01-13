@@ -190,3 +190,33 @@ var hasCycle = function(head) {
 //  c.1 Check if fast pointer has reached the end if yes then return false because if there is a cycle there will be no end.
 //  c.2 Check if both fast and slow pointer points to same node. If yes then there is a cycle because without cycle they will never come on same position and continue to have a diff due to difference in speed
 
+// Longest Substring Without Repeating Characters
+// Given a string s, find the length of the longest substring without repeating characters.
+
+var lengthOfLongestSubstring = function(s) {
+if (!s.length) return 0;
+
+let left = 0, right = 0;
+let maxLength = -Infinity;
+const set = new Set();
+
+while (right < s.length) {
+    // If s[right] has not been seen yet
+    if (!set.has(s[right])) {
+    // Add it to the set
+    set.add(s[right]);
+    // Increase size of window to right
+    right++;
+    // Update maxLength; set size represents length of unique substring
+    maxLength = Math.max(maxLength, set.size);
+    } else {
+    // We've seen s[right] so we need to shrink the window
+    // Delete s[left] from set
+    set.delete(s[left]);
+    // Shrink window from left
+    left++;
+    }
+}
+
+return maxLength;
+  }
