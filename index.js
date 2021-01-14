@@ -219,4 +219,15 @@ while (right < s.length) {
 }
 
 return maxLength;
-  }
+}
+
+//median sorted array
+
+var findMedianSortedArrays = function(nums1, nums2) {
+
+let merge = nums1.concat(nums2).sort((a,b)=>a-b);
+
+return merge.length%2 ? 
+        merge[(merge.length-1)/2]:
+        (merge[merge.length/2]+merge[(merge.length/2)-1])/2;
+};
