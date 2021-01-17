@@ -218,6 +218,6 @@ while (right < s.length) {
     }
 }
 
-return maxLength;
+return maxLength
 }
 
