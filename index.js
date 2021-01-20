@@ -182,16 +182,7 @@ var hasCycle = function(head) {
 };
 
 
-// Two pointer approach (slow and fast pointers)
 
-// a) We will have two pointers. first is slow pointer which will move one place from its prevoius position.
-// b) Second pointer is fast and it will move two places from its previous position.
-// c) At each Iteration. We'll :-
-//  c.1 Check if fast pointer has reached the end if yes then return false because if there is a cycle there will be no end.
-//  c.2 Check if both fast and slow pointer points to same node. If yes then there is a cycle because without cycle they will never come on same position and continue to have a diff due to difference in speed
-
-// Longest Substring Without Repeating Characters
-// Given a string s, find the length of the longest substring without repeating characters.
 
 var lengthOfLongestSubstring = function(s) {
 if (!s.length) return 0;
