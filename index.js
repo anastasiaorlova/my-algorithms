@@ -155,34 +155,6 @@ function twoSum(nums, target){
 return "not found"
 }
 
-//Linked List
-
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
-var hasCycle = function(head) {
-    if(head === null) return false;
-    let slow = head;
-    let fast = head.next;
-    while(slow !== fast && fast !== null) {
-        if(fast.next === null) return false
-        fast = fast.next.next
-        slow = slow.next
-    }
-    return slow === fast ? true : false
-};
-
-
-
 
 var lengthOfLongestSubstring = function(s) {
 if (!s.length) return 0;
