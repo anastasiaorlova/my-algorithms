@@ -1,12 +1,4 @@
-//Recursion
 
-function sumUpTo(n) {
-    if(n > 1) {
-        sumUpTo(n - 1) + n //recursive call
-    } else {
-        return 1 //base case
-    }
-}
 
 function printString(str) {
     console.log(str[0]) //мы всегда логиним только первую букву! и таким образом мы постепенно логиним все слово!
