@@ -1,14 +1,3 @@
-function printString(str) {
-    console.log(str[0]) //мы всегда логиним только первую букву! и таким образом мы постепенно логиним все слово!
-
-    if(str.length > 1) {
-        let substr = str.substring(1, str.length); //The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
-        printString(substr); //здесь мы вызываем ту же функцию, и позиция[1] становится [0], и далее по кругу - рекурсия!
-    } else {
-        return true
-    }
-}
-
 //sorted array
 
 function minAndRemove(arr) {
